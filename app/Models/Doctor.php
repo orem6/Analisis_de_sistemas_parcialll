@@ -10,6 +10,8 @@ class Doctor extends Model
 {
     use HasFactory;
 
+    protected $table = 'doctores';
+
     protected $fillable = ['nombre', 'apellido', 'especialidad', 'email'];
 
     public function citas(): HasMany
