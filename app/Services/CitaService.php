@@ -21,6 +21,8 @@ class CitaService
 
     public function crear(array $datos): Cita
     {
+        $datos['estado'] ??= 'pendiente';
+
         return Cita::create($datos)->load(['paciente', 'doctor']);
     }
 
